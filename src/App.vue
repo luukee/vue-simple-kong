@@ -68,30 +68,30 @@
                 </v-list-tile>
             </v-list>
         </v-navigation-drawer>
-        <v-toolbar class="primary contained" dark>
+        <v-toolbar class="primary contained" height="73" dark>
             <v-container class="my-0 mx-auto py-0">
                 <v-layout>
                     <v-toolbar-title align-center class="pt-2"><img src="public/kong-official-logo.svg" /></v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-side-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
                     <v-toolbar-items class="hidden-md-and-down">
-                        <v-btn flat class="white--text">products</v-btn>
-                        <v-btn flat class="white--text">plugin hub</v-btn>
-                        <v-btn flat class="white--text">resources</v-btn>
-                        <v-btn flat class="white--text">partners</v-btn>
-                        <v-btn flat class="white--text">company</v-btn>
-                        <v-btn flat class="white--text">blog</v-btn>
-                        <v-btn small outline class="secondary">request demo</v-btn>
-                        <v-btn small depressed class="secondary ml-3">installation</v-btn>
+                        <v-btn flat>Products</v-btn>
+                        <v-btn flat>Plugins Hub</v-btn>
+                        <v-btn flat>Resources</v-btn>
+                        <v-btn flat>Partners</v-btn>
+                        <v-btn flat>Company</v-btn>
+                        <v-btn flat>Blog</v-btn>
+                        <v-btn small outline>Request Demo</v-btn>
+                        <v-btn small depressed class="ml-3" color="secondary">Installation</v-btn>
                     </v-toolbar-items>
                 </v-layout>
             </v-container>
         </v-toolbar>
         <v-content>
-            <v-toolbar class="hidden-md-and-down">
+            <v-toolbar class="hidden-md-and-down second-nav">
                 <v-container class="mx-auto my-0 py-0">
                     <v-layout row>
-                        <v-flex class="pt-3">
+                        <v-flex class="pt-4">
                             <v-toolbar-title>Company</v-toolbar-title>
                         </v-flex>
                         <v-tabs right color="transparent" height="63px">
@@ -110,7 +110,7 @@
                     <v-flex>
                         <v-card height="90vh" flat>
                             <v-card-media height="100%">
-                                <v-container class="banner-callout fade-in" mt-0>
+                                <v-container class="banner-callout fade-in hidden-animation" mt-0>
                                     <v-layout row align-start justify-start pt-5>
                                         <v-flex sm8>
                                             <h1>Are you ready to join the API revolution?</h1>
@@ -129,7 +129,7 @@
                                         </v-flex>
                                     </v-layout>
                                 </v-container>
-                                <v-container banner-images fluid absolute class="fade-in">
+                                <v-container banner-images fluid absolute class="fade-in hidden-animation">
                                     <img class="obj" src="public/banner/woman-on-phone-01.svg" />
                                     <img class="obj" src="public/banner/small-plant.svg" />
                                     <img class="obj" src="public/banner/woman-relaxing.svg" />
@@ -180,43 +180,64 @@
                     </v-flex>
                 </v-layout>
             </v-container>
-            <v-container class="mission fluid">
-                <v-layout px-5 ma-5 fill-height>
-                    <v-container>
-                        <v-layout class="max-width fade-in" align-space-around justify-center column>
-                            <v-flex class="mb-5 pb-5">
-                                <h5 class="text-xs-center mb-3">who we are</h5>
-                                <p class="text-xs-center">We are a group of makers, thinkers, and doers focused on helping today’s developers build tomorrow’s technology. Our teams work on the bleeding edge of API innovation to provide our users with a central nervous system for data and services.</p>
-                                <p class="text-xs-center" id="inview">We believe in the power of Open Source and everything it stands for. That’s why developers around the world enthusiastically contribute on top of our open-source platform.</p>
-                            </v-flex>
 
-                            <v-flex>
-                                <img class="hidden mt-5 pt-5" src="public/developers-making-the-product.svg" />
-                            </v-flex>
+            <v-container fluid pa-0>
+                <v-container class="mission" fluid>
+                    <v-layout px-5 ma-5 fill-height>
+                        <v-container>
+                            <v-layout class="max-width fade-in hidden-animation" align-space-around justify-center column>
+                                <v-flex>
+                                    <h5 class="text-xs-center mb-3">who we are</h5>
+                                    <p class="text-xs-center">We are a group of makers, thinkers, and doers focused on helping today’s developers build tomorrow’s technology. Our teams work on the bleeding edge of API innovation to provide our users with a central nervous system for data and services.</p>
+                                    <p class="text-xs-center">We believe in the power of Open Source and everything it stands for. That’s why developers around the world enthusiastically contribute on top of our open-source platform.</p>
+                                </v-flex>
+                            </v-layout>
+                        </v-container>
+                    </v-layout>
+                </v-container>
 
-                            <v-flex>
-                                <h6 class="text-xs-center fade-in">We put design at the heart of everything we do, and we’re relentlessly focused on creating beautiful experiences for our customers. That’s why technology companies, major banks, e-commerce innovators, and government agencies put -name- in front of their most important web applications.</h6>
-                            </v-flex>
-
-                            <v-flex class="fade-in">
-                                <v-layout row id="counter" mt-5>
-                                    <v-flex xs4 text-xs-center>
-                                        <span class="counter-value" data-count="200">0</span><span class="ref">K</span>
-                                        <h6>Metrics</h6>
-                                    </v-flex>
-                                    <v-flex xs4 text-xs-center>
-                                        <span class="counter-value" data-count="12">0</span><span class="ref">K</span>
-                                        <h6>Metrics</h6>
-                                    </v-flex>
-                                    <v-flex xs4 text-xs-center>
-                                        <span class="counter-value" data-count="3">0</span><span class="ref">M</span>
-                                        <h6>Metrics</h6>
-                                    </v-flex>
-                                </v-layout>
-                            </v-flex>
-                        </v-layout>
-                    </v-container>
+                <v-layout row align-center justify-space-between class="flow-container">
+                  <v-flex xs6 class="animate-l">
+                      <div class="animate-l-box hidden-animation"></div>
+                      <img class="l-flow "src='/public/thought-flow-left-2.svg' />
+                  </v-flex >
+                  <span class="devs hidden-animation">
+                      <img src="public/developers-making-the-product.svg" />
+                  </span>
+                  <v-flex xs6 class="animate-r">
+                      <div class="animate-r-box hidden-animation"></div>
+                      <img class="r-flow " src='/public/thought-flow-left-2.svg' />
+                  </v-flex>
                 </v-layout>
+
+                <v-container class="mission" fluid>
+                    <v-layout px-5 ma-5 fill-height>
+                        <v-container>
+                            <v-layout class="max-width fade-in hidden-animation" align-space-around justify-center column>
+                                <v-flex>
+                                    <h6 class="text-xs-center fade-in hidden-animation">We put design at the heart of everything we do, and we’re relentlessly focused on creating beautiful experiences for our customers. That’s why technology companies, major banks, e-commerce innovators, and government agencies put -name- in front of their most important web applications.</h6>
+                                </v-flex>
+
+                                <v-flex class="fade-in hidden-animation">
+                                    <v-layout row id="counter" mt-5>
+                                        <v-flex xs4 text-xs-center>
+                                            <span class="counter-value" data-count="200">0</span><span class="ref">K</span>
+                                            <h6>Metrics</h6>
+                                        </v-flex>
+                                        <v-flex xs4 text-xs-center>
+                                            <span class="counter-value" data-count="12">0</span><span class="ref">K</span>
+                                            <h6>Metrics</h6>
+                                        </v-flex>
+                                        <v-flex xs4 text-xs-center>
+                                            <span class="counter-value" data-count="3">0</span><span class="ref">M</span>
+                                            <h6>Metrics</h6>
+                                        </v-flex>
+                                    </v-layout>
+                                </v-flex>
+                            </v-layout>
+                        </v-container>
+                    </v-layout>
+                </v-container>
             </v-container>
         </v-content>
     </v-app>
@@ -248,9 +269,11 @@ $sm: "only screen and (max-width: 959px)";
 $md: "only screen and (min-width: 960px)";
 $lg: "only screen and (min-width: 1264px)";
 $xl: "only screen and (min-width: 1904px)";
+
 p {
     font-size: 27px;
 }
+
 a {
     text-decoration: none;
 }
@@ -287,13 +310,84 @@ h6 {
     color: #4caf50;
 }
 
-// toolbar
-.v-toolbar>div {
-    margin: auto;
-    max-width: 1185px;
+
+// initial button hover setup
+.v-btn--active:before,
+.v-btn:hover:before,
+.v-btn:focus:before {
+    background-color: transparent;
 }
-.v-toolbar {
-    z-index: 8;
+.secondary.v-btn--active:before,
+.secondary.v-btn:hover:before,
+.secondary.v-btn:focus:before {
+    background-color: currentColor;
+}
+// toolbar
+nav, aside {
+    // initial button setup
+    .v-btn,
+    &.second-nav .v-toolbar__title,
+    &.second-nav .v-tabs__div,
+    .v-list__tile__title {
+        font-size: 13px;
+        letter-spacing: .5px;
+        transform: scaleY(.9);
+        &.v-btn--flat:not(.v-btn--small) {
+            font-weight: 600;
+        }
+        &.v-btn--small {
+            border-radius: 3px;
+            font-weight: 400;
+        }
+    }
+    // little padding fix
+    .container.my-0.mx-auto.py-0 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &.second-nav .v-toolbar__title,
+    .v-list__tile__title {
+        text-transform: uppercase;
+    }
+    // toolbar
+    .v-toolbar {
+        >div {
+            margin: auto;
+            max-width: 1185px;
+        }
+    }
+    // buttons
+    .v-toolbar__items button {
+        // no container button
+        &.v-btn--flat {
+            color: rgba(255,255,255,.6);
+            // text
+            &:hover {
+                color: #fff;
+            }
+            // background
+            &.v-btn:hover:before {
+                background-color: transparent;
+            }
+        }
+        // regular buttons height
+        &.v-btn--small {
+            height: min-content;
+            align-self: center;
+            padding-right: 16px;
+            padding-left: 16px;
+            padding-top: 10px;
+            padding-bottom: 10px
+        }
+        // regular buttons
+        &.v-btn--outline {
+            border-color: rgba(255,255,255,.8);
+            background: transparent;
+            &.v-btn--depressed.v-btn--small:hover {
+                border-color: #fff;
+            }
+        }
+    }
 }
 
 // side nav on top
@@ -458,6 +552,7 @@ aside.v-navigation-drawer  {
     }
 }
 
+// wild one with the chair
 @keyframes ladyinchair {
   0% {
     transform: rotate(0deg); //first turn
@@ -495,6 +590,7 @@ aside.v-navigation-drawer  {
   }
 }
 
+// boss pacing the floor
 @keyframes paceinplace {
   0% {
     transform: rotate(185deg); //first turn
@@ -545,20 +641,131 @@ aside.v-navigation-drawer  {
   backface-visibility: hidden;
 }
 
-.fade-in.in-view {
+.fade-in.fade-in-element {
   opacity: 1;
 }
 
+// who we are section
 .mission {
-    background: url("/public/developers-making-the-product.svg"), url("/public/thought-flow-left.svg"), url("/public/thought-flow-right.svg");
-    background-size: auto, 50%, 50%;
-    background-position: center, left center, right center;
-    background-repeat: no-repeat;
-    // animation: brainwaves 2s;
+    background: transparent;
+    * {
+        z-index: 9;
+    }
     .max-width {
         max-width: 900px;
         margin: auto;
     }
+}
+
+// developers flow lines initial setup
+.flow-container {
+    position: relative;
+    height: 25px;
+    .animate-l,
+    .animate-r {
+        position: absolute;
+        .animate-l-box,
+        .animate-r-box {
+            position: absolute;
+            display: block;
+            overflow: hidden;
+            background: #fbfbfb;
+            width: 500px;
+            height: 100%;
+            transition: .5s ease;
+            z-index: 1;
+        }
+        img {
+            z-index: 9;
+            position: static;
+            width: 100%;
+        }
+    }
+    // developers icon
+    .devs.fade-in-element {
+        z-index: 9;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        -webkit-animation:pop-in 1.5s;
+        -moz-animation:pop-in 1.5s;
+        -ms-animation:pop-in 1.5s;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+}
+// left side lines
+.animate-l {
+    left: 0;
+    width: 100%;
+    .animate-l-box.fade-in-element {
+        right:0;
+        bottom: 0;
+        left: 0;
+        animation: leftslide 7s 1 both;
+        z-index: 6;
+
+    }
+    img {
+        left: 0;
+    }
+}
+// right side lines
+.animate-r {
+    right: 0;
+    width: 100%;
+    transform: rotate(180deg);
+    .animate-r-box.fade-in-element {
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        animation: rightslide 7s 1 both;
+    }
+    img {
+        right: 0;
+        margin-bottom: 4vh
+    }
+}
+
+@keyframes leftslide {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+}
+
+@keyframes rightslide {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+}
+
+// developers pop in animation
+@-webkit-keyframes pop-in {
+    0% { opacity: 0; -webkit-transform: scale(0.5); }
+    50% { opacity: 1; -webkit-transform: scale(1.5); }
+    100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+    0% { opacity: 0; -moz-transform: scale(0.5); }
+    50% { opacity: 1; -moz-transform: scale(1.5); }
+    100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 // for the counter

@@ -6,8 +6,8 @@ import VueAnimateNumber from 'vue-animate-number'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#062F4D',
-    secondary: '#004B80',
+    primary: '#062f4c',
+    secondary: '#294b62',
     accent: '#8c9eff',
     error: '#b71c1c',
     success: "#17A956"
@@ -64,8 +64,8 @@ $(window).scroll(function() {
   }
 });
 
-// fade in animations: check if the element is in view https://codepen.io/SitePoint/pen/warKXE
-var $animation_elements = $('.fade-in');
+// enable animations when in viewport: check if the element is in view https://codepen.io/SitePoint/pen/warKXE
+var $animation_elements = $('.hidden-animation');
 var $window = $(window);
 
 function check_if_in_view() {
@@ -82,9 +82,9 @@ function check_if_in_view() {
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
       (element_top_position <= window_bottom_position)) {
-      $element.addClass('in-view');
+      $element.addClass('fade-in-element');
     } else {
-      $element.removeClass('in-view');
+      $element.removeClass('fade-in-element');
     }
   });
 }
